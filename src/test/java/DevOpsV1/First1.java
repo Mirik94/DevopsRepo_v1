@@ -12,22 +12,21 @@ public class First1 {
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\v-mirsha.EUROPE\\eclipse-workspace\\com.DevopsProjectV1\\Drivers\\chromedriver.exe");
-		
+
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
-		ChromeDriver driver = new ChromeDriver(options);
-		//WebDriver driver1 = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(options);
 		
-		//launch browser
+		// launch browser
 		driver.get("https://www.edureka.co/");
-		
-		//maximize the browser window
+
+		// maximize the browser window
 		driver.manage().window().maximize();
-		
-		//click on Courses button
+
+		// click on Courses button
 		driver.findElement(By.cssSelector("a.ga_courses_click")).click();
-		
-		//quit browser
+
+		// quit browser
 		driver.quit();
 
 	}
