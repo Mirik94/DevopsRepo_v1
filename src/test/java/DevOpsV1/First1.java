@@ -3,6 +3,7 @@ package DevOpsV1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class First1 {
@@ -11,7 +12,11 @@ public class First1 {
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\v-mirsha.EUROPE\\eclipse-workspace\\com.DevopsProjectV1\\Drivers\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		ChromeDriver driver = new ChromeDriver(options);
+		//WebDriver driver1 = new ChromeDriver();
 		
 		//launch browser
 		driver.get("https://www.edureka.co/");
